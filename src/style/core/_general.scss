@@ -1,0 +1,54 @@
+/** // *======================== general ========================* // **/
+
+html {
+  scroll-behavior: smooth;
+
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+.wrapper, .App {
+  font-family: lato, Arial, Helvetica, sans-serif;
+  width: 100%;
+  min-height: 100%;
+  overflow: clip;
+  color: #fff;
+}
+
+.container {
+  max-width: max(vwDesk(1440px), 1440px);
+  padding-inline: max(vwDesk(40px), 20px);
+  margin-inline: auto;
+  height: 100%;
+}
+
+.sections-wrapper {
+  background-image: linear-gradient(#1e3040, #567c7e);
+  margin-top: calc(-1 * const(4px));
+  color: #fff;
+  box-shadow: 0 calc(-1 * desk(60px, 0)) desk(90px, 40px) const(60px) #1e3040;
+
+  position: relative;
+  z-index: 1;
+}
+
+.main {
+  background-color: #1e3040;
+}
+
+section {
+  padding-block: desk(60px, 50px);
+
+  @media (max-width: $TABLET) {
+    padding-block: tab(50px, 40px);
+  }
+}
